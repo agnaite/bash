@@ -33,34 +33,34 @@ alias deskshow='defaults write com.apple.finder CreateDesktop -bool true && kill
 source "$(pluc-cli --destinationPath)"
 function pluc() {
   pluc-cli "$@"
-    source "$(pluc-cli --destinationPath)"
-  }
+  source "$(pluc-cli --destinationPath)"
+}
 
-  if [ -e /usr/local/bin/rbenv ]; then
-      export PATH="$HOME/.rbenv/bin:$PATH"
-        eval "$(rbenv init -)"
-      fi
+if [ -e /usr/local/bin/rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
 
-      EMOJI=(
-      ☕️
-      🍄
-      🍕
-      🌱
-      🐱
-      🌙
-      ✨
-      🌯
-      💕
-      🐰
-      👽
-      💎
-      🔮
-      🚀
-      💅🏻
-      🦄
-      🍺
-      🇩🇪
-      )
+EMOJI=(
+☕️
+🍄
+🍕
+🌱
+🐱
+🌙
+✨
+🌯
+💕
+🐰
+👽
+💎
+🔮
+🚀
+💅🏻
+🦄
+🍺
+🇩🇪
+)
 
 export PATH="/usr/local/bin:$PATH"
 emoji="${EMOJI[$RANDOM % ${#EMOJI[@]}]}"
@@ -73,4 +73,3 @@ export PS1="\[\033[1;38;5;157m\]\u✨ \[$(tput sgr0)\]\[\033[38;5;147m\][\W]: ${
 # MacPorts Installer addition on 2016-09-22_at_12:42:09: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
-
